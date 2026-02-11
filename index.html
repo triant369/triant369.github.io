@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triant Applied Research & Engineering</title>
+<meta name="description" content="Applied engineering consultant specializing in embedded systems, IoT prototyping and control systems.">
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== NAVBAR ===== */
+
+nav {
+    background: #111;
+    color: white;
+    padding: 18px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    background: linear-gradient(135deg, #111, #1f2937);
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* ===== SECTION ===== */
+
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+
+/* ===== PROJECT GRID ===== */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px;
+}
+
+/* ===== PROJECT CARD ===== */
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+/* ===== IMAGE SIZE CONTROL ===== */
+
+.project-card img {
+    width: 100%;
+    height: 300px;           /* <<< Ubah angka ini jika ingin lebih kecil/besar */
+    object-fit: cover;       /* Auto crop tanpa distorsi */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== PROJECT CONTENT ===== */
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* ===== ABOUT TEXT ===== */
+
+.about-text {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+    font-size: 16px;
+}
+
+/* ===== CONTACT ===== */
+
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 35px 0;
+    font-size: 13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="container">
+        <div><strong>Triant369</strong></div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Triant Applied Research & Engineering</h1>
+    <p>Embedded Systems • IoT Architecture • Wireless Control • Prototyping</p>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <h2>About</h2>
+        <p class="about-text">
+            Independent engineering consultant focusing on applied embedded systems,
+            wireless communication, and system-level prototyping.
+            Selected works are officially registered under Indonesian Intellectual Property (HKI).
+        </p>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+        <h2>Selected Engineering Works</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <img src="images/gps.jpg" alt="Portable GPS">
+                <div class="project-content">
+                    <h3>Portable GPS Tracking System</h3>
+                    <p><strong>Status:</strong> Registered HKI</p>
+                    <p>
+                        Portable GPS tracking prototype integrating embedded module,
+                        wireless transmission, and scalable monitoring architecture.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/tractor.JPG" alt="Wireless Tractor">
+                <div class="project-content">
+                    <h3>Wireless Tractor Control System</h3>
+                    <p><strong>Status:</strong> Registered HKI</p>
+                    <p>
+                        Remote-control agricultural tractor prototype designed for
+                        safety, flexibility, and real-time embedded control.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container contact">
+        <h2>Contact</h2>
+        <p>Email: setia.trianto@gmail.com</p>
+        <p>
+            GitHub:
+            <a href="https://github.com/triant369" target="_blank">
+                github.com/triant369
+            </a>
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Triant Applied Research & Engineering
+</footer>
+
+</body>
+</html>
