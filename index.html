@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Triant Applied Research & Engineering</title>
-<meta name="description" content="Applied engineering consultant specializing in embedded systems, IoT prototyping and control systems.">
+<meta name="description" content="Applied engineering consultant specializing in embedded systems, telemetry systems, IoT prototyping, and control architecture.">
 
 <style>
 
@@ -54,12 +54,12 @@ nav a:hover {
 .hero {
     background: linear-gradient(135deg, #111, #1f2937);
     color: white;
-    padding: 120px 20px;
+    padding: 130px 20px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 15px;
 }
 
@@ -71,7 +71,7 @@ nav a:hover {
 /* ===== SECTION ===== */
 
 section {
-    padding: 80px 0;
+    padding: 90px 0;
 }
 
 section h2 {
@@ -103,12 +103,13 @@ section h2 {
     box-shadow: 0 12px 28px rgba(0,0,0,0.1);
 }
 
-/* ===== IMAGE CONTROL (UPDATED) ===== */
+/* ===== IMAGE CONTROL ===== */
 
 .project-card img {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.4s ease;
 }
 
 .project-card:hover img {
@@ -129,14 +130,14 @@ section h2 {
 .project-content p {
     font-size: 14px;
     color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* ===== ABOUT TEXT ===== */
 
 .about-text {
     text-align: center;
-    max-width: 750px;
+    max-width: 760px;
     margin: auto;
     font-size: 16px;
 }
@@ -166,15 +167,11 @@ footer {
     font-size: 13px;
 }
 
-/* ===== RESPONSIVE TWEAK ===== */
+/* ===== RESPONSIVE ===== */
 
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 28px;
-    }
-
-    .project-card img {
-        height: 280px;
     }
 }
 
@@ -186,10 +183,10 @@ footer {
 <!-- NAVIGATION -->
 <nav>
     <div class="container">
-        <div><strong>Triant369</strong></div>
+        <div><strong>Triant Applied Research</strong></div>
         <div>
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <a href="#projects">IP Portfolio</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
@@ -198,7 +195,7 @@ footer {
 <!-- HERO -->
 <div class="hero">
     <h1>Triant Applied Research & Engineering</h1>
-    <p>Embedded Systems • IoT Architecture • Wireless Control • Prototyping</p>
+    <p>Applied Embedded Systems • Telemetry Architecture • Wireless Control • Sustainable Prototyping</p>
 </div>
 
 <!-- ABOUT -->
@@ -206,9 +203,10 @@ footer {
     <div class="container">
         <h2>About</h2>
         <p class="about-text">
-            Independent engineering consultant focusing on applied embedded systems,
-            wireless communication, and system-level prototyping.
-            Selected works are officially registered under Indonesian Intellectual Property (HKI).
+            Independent applied systems engineer specializing in embedded architecture,
+            telemetry systems, and low-cost field-deployable prototypes.
+            Selected works are officially registered under Indonesian Intellectual Property (HKI),
+            reflecting practical engineering solutions designed for real-world constraints.
         </p>
     </div>
 </section>
@@ -216,38 +214,44 @@ footer {
 <!-- PROJECTS -->
 <section id="projects">
     <div class="container">
-        <h2>Selected Engineering Works</h2>
+        <h2>Intellectual Property Portfolio</h2>
 
         <div class="project-grid">
 
-<div class="project-card">
-    <img src="gps.jpg" alt="Portable Emergency GPS and Telemetry System">
-    <div class="project-content">
-        <h3>Portable Low-Cost Emergency GPS & Telemetry System</h3>
-        <p><strong>Status:</strong> Registered Intellectual Property (HKI)</p>
-        <p>
-            A portable location and telemetry system engineered for emergency response
-            and territorial mapping applications.
-        </p>
-        <p>
-            The prototype emphasizes cost-efficient field deployment through optimized
-            integration of repurposed electronic components while maintaining functional
-            reliability and operational adaptability.
-        </p>
-        <p><strong>Technical Scope:</strong> Embedded Systems • Geospatial Positioning • Telemetry Architecture • Sustainable Field Deployment</p>
-    </div>
-</div>
-
-
+            <!-- GPS PROJECT -->
             <div class="project-card">
-                <img src="tractor.JPG" alt="Wireless Tractor">
+                <img src="gps.jpg" alt="Portable Emergency GPS and Telemetry System">
                 <div class="project-content">
-                    <h3>Wireless Tractor Control System</h3>
-                    <p><strong>Status:</strong> Registered HKI</p>
+                    <h3>Portable Low-Cost Emergency GPS & Telemetry System</h3>
+                    <p><strong>Status:</strong> Registered Intellectual Property (HKI)</p>
                     <p>
-                        Remote-control agricultural tractor prototype designed for
-                        safety, flexibility, and real-time embedded control.
+                        A portable location and telemetry system engineered for emergency response
+                        and territorial mapping applications.
                     </p>
+                    <p>
+                        The system demonstrates cost-efficient deployment through optimized reuse
+                        of electronic components while maintaining operational reliability and
+                        field adaptability.
+                    </p>
+                    <p><strong>Technical Scope:</strong> Embedded Systems • Geospatial Positioning • Telemetry Architecture • Sustainable Field Deployment</p>
+                </div>
+            </div>
+
+            <!-- TRACTOR PROJECT -->
+            <div class="project-card">
+                <img src="tractor.JPG" alt="Wireless Agricultural Control System">
+                <div class="project-content">
+                    <h3>Wireless Agricultural Control System</h3>
+                    <p><strong>Status:</strong> Registered Intellectual Property (HKI)</p>
+                    <p>
+                        A wireless remote-control agricultural system designed to improve
+                        operational safety and flexibility through embedded control architecture.
+                    </p>
+                    <p>
+                        The prototype integrates real-time command transmission and
+                        adaptive control mechanisms for practical field application.
+                    </p>
+                    <p><strong>Technical Scope:</strong> Control Systems • Embedded Programming • Wireless Communication • Applied Automation</p>
                 </div>
             </div>
 
@@ -276,5 +280,3 @@ footer {
 
 </body>
 </html>
-
-
