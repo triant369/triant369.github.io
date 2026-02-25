@@ -29,6 +29,17 @@ nav .container { display:flex; justify-content:space-between; align-items:center
 nav a { color:white; text-decoration:none; margin-left:25px; font-size:14px; }
 nav a:hover { color:#00bcd4; }
 
+.lang-toggle button {
+    background:#333;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    margin-left:10px;
+    cursor:pointer;
+    font-size:12px;
+}
+.lang-toggle button:hover { background:#00bcd4; }
+
 /* ===== HERO ===== */
 .hero { background:linear-gradient(135deg,#111,#1f2937); color:white; padding:120px 20px; text-align:center; }
 .hero h1 { font-size:38px; margin-bottom:15px; }
@@ -46,9 +57,7 @@ nav a:hover { color:#00bcd4; }
     color: #e5e5e5;
 }
 
-.hero-cta {
-    margin-top: 30px;
-}
+.hero-cta { margin-top: 30px; }
 
 .hero-cta a {
     display: inline-block;
@@ -60,10 +69,7 @@ nav a:hover { color:#00bcd4; }
     border-radius: 6px;
     transition: 0.3s;
 }
-
-.hero-cta a:hover {
-    background: #00a3b8;
-}
+.hero-cta a:hover { background: #00a3b8; }
 
 /* ===== SECTION ===== */
 section { padding:80px 0; }
@@ -71,15 +77,8 @@ section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
 .center-text { text-align:center; max-width:850px; margin:auto; font-size:16px; line-height:1.7; }
 
 /* ===== LIST ===== */
-.service-list, .workflow-list {
-    max-width:800px;
-    margin: 30px auto;
-    line-height:1.8;
-}
-
-.service-list li, .workflow-list li {
-    margin-bottom:12px;
-}
+.service-list { max-width:800px; margin: 30px auto; line-height:1.8; }
+.service-list li { margin-bottom:12px; }
 
 /* ===== PROJECT GRID ===== */
 .project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:35px; }
@@ -91,11 +90,7 @@ section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
     overflow:hidden;
     transition:0.3s;
 }
-
-.project-card:hover {
-    transform:translateY(-6px);
-    box-shadow:0 12px 28px rgba(0,0,0,0.1);
-}
+.project-card:hover { transform:translateY(-6px); box-shadow:0 12px 28px rgba(0,0,0,0.1); }
 
 .project-card img { width:100%; height:auto; display:block; }
 .project-content { padding:25px; }
@@ -128,18 +123,37 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 <a href="#projects">Projects</a>
 <a href="#experimental">Applied Work</a>
 <a href="#contact">Contact</a>
+<span class="lang-toggle">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('id')">ID</button>
+</span>
 </div>
 </div>
 </nav>
 
 <div class="hero">
+
+<div class="lang en">
 <h1>Triant Applied Research & Engineering</h1>
 <p>Embedded Systems • IoT Implementation • Telemetry Development</p>
+</div>
+
+<div class="lang id" style="display:none;">
+<h1>Triant Applied Research & Engineering</h1>
+<p>Sistem Tertanam • Implementasi IoT • Pengembangan Telemetri</p>
+</div>
 
 <div class="highlight-box">
+<div class="lang en">
 <strong>Technical Focus:</strong><br>
 IoT System Architecture • Embedded Firmware Development •  
 Telemetry Integration • Hardware Testing & Validation
+</div>
+<div class="lang id" style="display:none;">
+<strong>Fokus Teknis:</strong><br>
+Arsitektur Sistem IoT • Pengembangan Firmware •  
+Integrasi Telemetri • Pengujian & Validasi Perangkat Keras
+</div>
 </div>
 
 <p style="margin-top:15px; font-size:13px; color:#bbb;">
@@ -154,37 +168,57 @@ Independent engineering practice (NIB active)
 
 <section id="about">
 <div class="container">
+<div class="lang en">
 <h2>About</h2>
 <p class="center-text">
 Independent embedded systems and IoT engineering practice focused on applied prototyping,
-telemetry implementation, and experimental electronics development.  
-Completed national IoT technical training program (Kominfo, 2022).  
+telemetry implementation, and experimental electronics development.
+Completed national IoT technical training program (Kominfo, 2022).
 Selected works are registered under Indonesian Intellectual Property (HKI).
 </p>
+</div>
+
+<div class="lang id" style="display:none;">
+<h2>Tentang</h2>
+<p class="center-text">
+Praktik rekayasa sistem tertanam dan IoT yang berfokus pada pengembangan prototipe terapan,
+implementasi telemetri, serta eksperimen dan evaluasi perangkat elektronik.
+Telah menyelesaikan pelatihan teknis IoT nasional (Kominfo, 2022).
+Beberapa karya telah terdaftar dalam Hak Kekayaan Intelektual (HKI).
+</p>
+</div>
 </div>
 </section>
 
 <section id="services">
 <div class="container">
+<div class="lang en">
 <h2>Engineering Services</h2>
 <ul class="service-list">
 <li>IoT System Implementation & Embedded Integration</li>
-<li>Custom Embedded Prototype Development 
-(Microcontroller-based systems: ATmega, Arduino, ESP32, ESP8266)
-</li>
-<li>
-Telemetry & Remote Monitoring Systems (WiFi, LoRa-based embedded platforms)
-</li>
+<li>Custom Embedded Prototype Development (ATmega, Arduino, ESP32, ESP8266)</li>
+<li>Telemetry & Remote Monitoring Systems (WiFi / LoRa Platforms)</li>
 <li>Hardware Testing & System Evaluation</li>
 <li>Technical Workshops & Embedded Training</li>
 </ul>
+</div>
+
+<div class="lang id" style="display:none;">
+<h2>Layanan Rekayasa</h2>
+<ul class="service-list">
+<li>Implementasi Sistem IoT & Integrasi Sistem Tertanam</li>
+<li>Pengembangan Prototipe Sistem Tertanam (ATmega, Arduino, ESP32, ESP8266)</li>
+<li>Sistem Telemetri & Monitoring Jarak Jauh (WiFi / LoRa)</li>
+<li>Pengujian Perangkat Keras & Evaluasi Sistem</li>
+<li>Workshop Teknis & Pelatihan Embedded</li>
+</ul>
+</div>
 </div>
 </section>
 
 <section id="projects">
 <div class="container">
 <h2>Selected Prototypes</h2>
-
 <div class="project-grid">
 
 <div class="project-card">
@@ -211,12 +245,23 @@ Telemetry & Remote Monitoring Systems (WiFi, LoRa-based embedded platforms)
 
 <section id="experimental">
 <div class="container">
+<div class="lang en">
 <h2>Applied & Experimental Work</h2>
 <p class="center-text">
-Ongoing applied technical work includes custom DC power supply builds, RF signal monitoring prototypes,
+Ongoing applied work includes custom DC power supply builds, RF signal monitoring prototypes,
 reverse engineering analysis of electronic devices, hardware teardown evaluation,
-and IoT integration experiments using ESP32 / ESP8266 platforms with Telegram-based remote control and monitoring.
+and IoT integration experiments using ESP32 / ESP8266 platforms with Telegram-based monitoring.
 </p>
+</div>
+
+<div class="lang id" style="display:none;">
+<h2>Pekerjaan Terapan & Eksperimental</h2>
+<p class="center-text">
+Pekerjaan teknis meliputi perancangan power supply DC kustom, prototipe monitoring sinyal RF,
+analisis reverse engineering perangkat elektronik, evaluasi pembongkaran perangkat,
+serta eksperimen integrasi IoT menggunakan ESP32 / ESP8266 dengan monitoring berbasis Telegram.
+</p>
+</div>
 </div>
 </section>
 
@@ -238,6 +283,18 @@ Open for embedded system and IoT prototype collaboration.
 Independent Engineering Practice (NIB Active)
 </footer>
 
+<script>
+function setLang(lang) {
+    localStorage.setItem("siteLang", lang);
+    updateLang();
+}
+function updateLang() {
+    var lang = localStorage.getItem("siteLang") || "en";
+    document.querySelectorAll(".lang").forEach(el => el.style.display = "none");
+    document.querySelectorAll("." + lang).forEach(el => el.style.display = "block");
+}
+document.addEventListener("DOMContentLoaded", updateLang);
+</script>
+
 </body>
 </html>
-
