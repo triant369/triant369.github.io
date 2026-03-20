@@ -9,9 +9,10 @@
 
 <style>
 
+/* ===== GLOBAL ===== */
 body {
     margin:0;
-    font-family:'Segoe UI', Arial;
+    font-family:'Segoe UI', Arial, sans-serif;
     background:#f4f6f9;
     color:#222;
 }
@@ -22,7 +23,7 @@ body {
     margin:auto;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
     background:linear-gradient(135deg,#111,#1f2937);
     color:white;
@@ -30,19 +31,24 @@ body {
     text-align:center;
 }
 
-/* SECTION */
+/* ===== SECTION ===== */
 section {
     padding:60px 0;
 }
 
-/* IMAGE */
+h2 {
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* ===== IMAGE ===== */
 img {
     width:100%;
     border-radius:10px;
     margin-top:20px;
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 .back-btn {
     display:inline-block;
     margin-top:30px;
@@ -53,7 +59,7 @@ img {
     border-radius:6px;
 }
 
-/* LANG BUTTON */
+/* ===== LANGUAGE TOGGLE ===== */
 .lang-toggle {
     position:fixed;
     top:15px;
@@ -74,6 +80,7 @@ img {
 
 <body>
 
+<!-- LANGUAGE BUTTON -->
 <div class="lang-toggle">
 <button onclick="setLang('en')">EN</button>
 <button onclick="setLang('id')">ID</button>
@@ -100,17 +107,17 @@ img {
 
 <div class="lang en">
 <h2>Overview</h2>
-<p>
-This system automates irrigation using real-time soil moisture sensing and embedded decision-making.
-The device operates independently using edge computing, allowing automatic water control without cloud dependency.
+<p style="text-align:center; max-width:700px; margin:auto;">
+This system is designed to automate irrigation using real-time soil moisture sensing and embedded decision-making.
+The device operates independently using edge computing, allowing automatic water control without reliance on external servers.
 </p>
 </div>
 
 <div class="lang id" style="display:none;">
 <h2>Gambaran Sistem</h2>
-<p>
-Sistem ini mengotomatisasi penyiraman berdasarkan sensor kelembaban tanah secara real-time.
-Perangkat bekerja secara mandiri menggunakan edge computing tanpa ketergantungan cloud.
+<p style="text-align:center; max-width:700px; margin:auto;">
+Sistem ini dirancang untuk mengotomatisasi penyiraman menggunakan sensor kelembaban tanah secara real-time dan pengambilan keputusan berbasis embedded.
+Perangkat bekerja secara mandiri menggunakan edge computing tanpa ketergantungan pada server eksternal.
 </p>
 </div>
 
@@ -125,7 +132,7 @@ Perangkat bekerja secara mandiri menggunakan edge computing tanpa ketergantungan
 
 <div class="lang en">
 <h2>Key Features</h2>
-<ul>
+<ul style="max-width:700px; margin:auto; line-height:1.8;">
 <li>Real-time soil moisture monitoring</li>
 <li>Automatic irrigation based on threshold</li>
 <li>Telegram-based remote control</li>
@@ -137,10 +144,10 @@ Perangkat bekerja secara mandiri menggunakan edge computing tanpa ketergantungan
 
 <div class="lang id" style="display:none;">
 <h2>Fitur Utama</h2>
-<ul>
-<li>Monitoring kelembaban tanah real-time</li>
-<li>Penyiraman otomatis berbasis threshold</li>
-<li>Kontrol jarak jauh via Telegram</li>
+<ul style="max-width:700px; margin:auto; line-height:1.8;">
+<li>Monitoring kelembaban tanah secara real-time</li>
+<li>Penyiraman otomatis berbasis ambang batas</li>
+<li>Kontrol jarak jauh melalui Telegram</li>
 <li>Proteksi timeout pompa</li>
 <li>Dapat menggunakan powerbank</li>
 <li>Edge computing tanpa cloud</li>
@@ -170,7 +177,7 @@ Perangkat bekerja secara mandiri menggunakan edge computing tanpa ketergantungan
 </div>
 </section>
 
-<!-- BACK -->
+<!-- BACK BUTTON -->
 <section>
 <div class="container" style="text-align:center;">
 
@@ -179,20 +186,38 @@ Perangkat bekerja secara mandiri menggunakan edge computing tanpa ketergantungan
 </div>
 </section>
 
+<!-- ===== LANGUAGE SCRIPT (FIXED FINAL) ===== -->
 <script>
+
 function setLang(lang) {
     localStorage.setItem("siteLang", lang);
     updateLang();
 }
 
 function updateLang() {
-    var lang = localStorage.getItem("siteLang") || "en";
+    var lang = localStorage.getItem("siteLang");
 
-    document.querySelectorAll(".lang").forEach(el => el.style.display = "none");
-    document.querySelectorAll("." + lang).forEach(el => el.style.display = "block");
+    // AUTO DETECT jika belum pernah pilih
+    if (!lang) {
+        lang = navigator.language.startsWith('id') ? 'id' : 'en';
+    }
+
+    // sembunyikan semua
+    document.querySelectorAll(".lang").forEach(el => {
+        el.style.display = "none";
+    });
+
+    // tampilkan sesuai bahasa
+    document.querySelectorAll("." + lang).forEach(el => {
+        el.style.display = "block";
+    });
 }
 
-document.addEventListener("DOMContentLoaded", updateLang);
+// WAJIB: memastikan jalan saat halaman load
+window.onload = function() {
+    updateLang();
+};
+
 </script>
 
 </body>
