@@ -5,25 +5,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Smart Irrigation System | Triant Engineering</title>
+<title>Smart Irrigation IoT System</title>
 
 <style>
 
-/* ===== GLOBAL ===== */
 body {
     margin:0;
-    font-family:'Segoe UI', Arial, sans-serif;
+    font-family:'Segoe UI', Arial;
     background:#f4f6f9;
     color:#222;
 }
 
 .container {
     width:90%;
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
     background:linear-gradient(135deg,#111,#1f2937);
     color:white;
@@ -31,176 +30,170 @@ body {
     text-align:center;
 }
 
-.hero h1 {
-    font-size:34px;
-    margin-bottom:10px;
-}
-
-.hero p {
-    color:#ccc;
-    font-size:16px;
-}
-
-/* ===== SECTION ===== */
+/* SECTION */
 section {
-    padding:70px 0;
+    padding:60px 0;
 }
 
-section h2 {
-    text-align:center;
-    margin-bottom:30px;
-}
-
-/* ===== IMAGE ===== */
-.image-box {
-    margin:30px 0;
-    text-align:center;
-}
-
-.image-box img {
+/* IMAGE */
+img {
     width:100%;
-    max-width:700px;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    border-radius:10px;
+    margin-top:20px;
 }
 
-/* ===== FEATURE LIST ===== */
-.features {
-    max-width:700px;
-    margin:30px auto;
-    line-height:1.8;
-}
-
-.feature {
-    margin-bottom:12px;
-}
-
-/* ===== BACK BUTTON ===== */
-.back {
-    text-align:center;
-    margin-top:40px;
-}
-
-.back a {
+/* BUTTON */
+.back-btn {
     display:inline-block;
-    padding:12px 24px;
+    margin-top:30px;
+    padding:12px 20px;
     background:#00bcd4;
     color:#111;
     text-decoration:none;
     border-radius:6px;
-    font-weight:600;
 }
 
-.back a:hover {
-    background:#0097a7;
+/* LANG BUTTON */
+.lang-toggle {
+    position:fixed;
+    top:15px;
+    right:15px;
+}
+
+.lang-toggle button {
+    padding:6px 10px;
+    border:none;
+    margin-left:5px;
+    cursor:pointer;
+    background:#111;
+    color:white;
 }
 
 </style>
-
 </head>
 
 <body>
 
+<div class="lang-toggle">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('id')">ID</button>
+</div>
+
 <!-- HERO -->
 <div class="hero">
-    <h1>Smart Irrigation IoT System</h1>
-    <p>Autonomous Soil Monitoring & Water Control using ESP32</p>
+
+<div class="lang en">
+<h1>Smart Irrigation IoT System</h1>
+<p>Autonomous Soil Monitoring & Water Control using ESP32</p>
+</div>
+
+<div class="lang id" style="display:none;">
+<h1>Sistem Irigasi IoT Cerdas</h1>
+<p>Monitoring Kelembaban Tanah & Kontrol Air Otomatis berbasis ESP32</p>
+</div>
+
 </div>
 
 <!-- OVERVIEW -->
 <section>
 <div class="container">
 
+<div class="lang en">
 <h2>Overview</h2>
-
-<p style="text-align:center; max-width:800px; margin:auto; line-height:1.7;">
-This system is designed to automate irrigation using real-time soil moisture sensing 
-and embedded decision-making. The device operates independently using edge computing, 
-allowing automatic water control without reliance on external servers.
+<p>
+This system automates irrigation using real-time soil moisture sensing and embedded decision-making.
+The device operates independently using edge computing, allowing automatic water control without cloud dependency.
 </p>
+</div>
 
-<div class="image-box">
+<div class="lang id" style="display:none;">
+<h2>Gambaran Sistem</h2>
+<p>
+Sistem ini mengotomatisasi penyiraman berdasarkan sensor kelembaban tanah secara real-time.
+Perangkat bekerja secara mandiri menggunakan edge computing tanpa ketergantungan cloud.
+</p>
+</div>
+
 <img src="assets/images/irrigation/irrigation-main.jpeg">
-</div>
-
-</div>
-</section>
-
-<!-- SYSTEM -->
-<section style="background:white;">
-<div class="container">
-
-<h2>System Architecture</h2>
-
-<div class="image-box">
-<img src="assets/images/irrigation/system.jpeg">
-</div>
-
-</div>
-</section>
-
-<!-- SENSOR -->
-<section>
-<div class="container">
-
-<h2>Soil Sensor Integration</h2>
-
-<div class="image-box">
-<img src="assets/images/irrigation/sensor.jpeg">
-</div>
-
-</div>
-</section>
-
-<!-- HARDWARE -->
-<section style="background:white;">
-<div class="container">
-
-<h2>Embedded Hardware</h2>
-
-<div class="image-box">
-<img src="assets/images/irrigation/system2.jpeg">
-</div>
-
-</div>
-</section>
-
-<!-- TELEGRAM -->
-<section>
-<div class="container">
-
-<h2>Remote Monitoring (Telegram Interface)</h2>
-
-<div class="image-box">
-<img src="assets/images/irrigation/Telegram.jpeg">
-</div>
 
 </div>
 </section>
 
 <!-- FEATURES -->
-<section style="background:white;">
+<section>
 <div class="container">
 
+<div class="lang en">
 <h2>Key Features</h2>
-
-<div class="features">
-
-<div class="feature">✔ Real-time soil moisture monitoring</div>
-<div class="feature">✔ Automatic irrigation based on threshold</div>
-<div class="feature">✔ Telegram-based remote control</div>
-<div class="feature">✔ Pump safety timeout protection</div>
-<div class="feature">✔ Portable power system (powerbank supported)</div>
-<div class="feature">✔ Edge computing (no cloud dependency)</div>
-
+<ul>
+<li>Real-time soil moisture monitoring</li>
+<li>Automatic irrigation based on threshold</li>
+<li>Telegram-based remote control</li>
+<li>Pump safety timeout protection</li>
+<li>Portable power system (powerbank supported)</li>
+<li>Edge computing (no cloud dependency)</li>
+</ul>
 </div>
 
-<div class="back">
-<a href="index.html">← Back to Main Page</a>
+<div class="lang id" style="display:none;">
+<h2>Fitur Utama</h2>
+<ul>
+<li>Monitoring kelembaban tanah real-time</li>
+<li>Penyiraman otomatis berbasis threshold</li>
+<li>Kontrol jarak jauh via Telegram</li>
+<li>Proteksi timeout pompa</li>
+<li>Dapat menggunakan powerbank</li>
+<li>Edge computing tanpa cloud</li>
+</ul>
 </div>
 
 </div>
 </section>
+
+<!-- GALLERY -->
+<section>
+<div class="container">
+
+<div class="lang en">
+<h2>System Components</h2>
+</div>
+
+<div class="lang id" style="display:none;">
+<h2>Komponen Sistem</h2>
+</div>
+
+<img src="assets/images/irrigation/system.jpeg">
+<img src="assets/images/irrigation/system2.jpeg">
+<img src="assets/images/irrigation/sensor.jpeg">
+<img src="assets/images/irrigation/Telegram.jpeg">
+
+</div>
+</section>
+
+<!-- BACK -->
+<section>
+<div class="container" style="text-align:center;">
+
+<a href="index.html" class="back-btn">← Back to Main Page</a>
+
+</div>
+</section>
+
+<script>
+function setLang(lang) {
+    localStorage.setItem("siteLang", lang);
+    updateLang();
+}
+
+function updateLang() {
+    var lang = localStorage.getItem("siteLang") || "en";
+
+    document.querySelectorAll(".lang").forEach(el => el.style.display = "none");
+    document.querySelectorAll("." + lang).forEach(el => el.style.display = "block");
+}
+
+document.addEventListener("DOMContentLoaded", updateLang);
+</script>
 
 </body>
 </html>
