@@ -96,19 +96,7 @@ section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
 .project-content { padding:25px; }
 .project-content h3 { margin-top:0; }
 
-/* ===== PROJECT LINK (NEW) ===== */
-.project-content a {
-    display:inline-block;
-    margin-top:12px;
-    color:#00bcd4;
-    text-decoration:none;
-    font-weight:600;
-    font-size:14px;
-    transition:0.3s;
-}
-.project-content a:hover { color:#008fa1; }
-
-/* ===== PROJECT TEXT (NEW) ===== */
+/* ===== PROJECT TEXT ===== */
 .project-content p {
     font-size:14px;
     color:#555;
@@ -151,8 +139,17 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 </nav>
 
 <div class="hero">
+
+<div class="lang en">
 <h1>Triant Applied Research & Engineering</h1>
 <p>Embedded Systems • IoT Implementation • Telemetry Development</p>
+</div>
+
+<div class="lang id" style="display:none;">
+<h1>Triant Applied Research & Engineering</h1>
+<p>Sistem Tertanam • Implementasi IoT • Pengembangan Telemetri</p>
+</div>
+
 </div>
 
 <section id="projects">
@@ -163,7 +160,7 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 
 <!-- GPS -->
 <div class="project-card">
-<img src="gps.jpg">
+<img src="gps.jpg" alt="Portable GPS">
 <div class="project-content">
 <h3>Portable Emergency GPS & Telemetry System</h3>
 <p><strong>Status:</strong> Registered HKI</p>
@@ -173,7 +170,7 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 
 <!-- TRACTOR -->
 <div class="project-card">
-<img src="tractor.JPG">
+<img src="tractor.JPG" alt="Wireless Control">
 <div class="project-content">
 <h3>Wireless Control Prototype</h3>
 <p><strong>Status:</strong> Registered HKI</p>
@@ -181,24 +178,61 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 </div>
 </div>
 
-<!-- IRRIGATION (NEW) -->
+<!-- IRRIGATION -->
+<a href="irrigation.html" style="text-decoration:none; color:inherit;">
 <div class="project-card">
-<img src="assets/images/irrigation/irrigation-main.jpeg">
+
+<img src="assets/images/irrigation/irrigation-main.jpeg" alt="Smart Irrigation IoT System">
+
 <div class="project-content">
+
 <h3>Smart Irrigation IoT System</h3>
+
 <p><strong>Status:</strong> Functional Prototype</p>
 <p><strong>Scope:</strong> IoT • Embedded System • Automation</p>
+
 <p>
 Real-time soil monitoring with autonomous irrigation control 
 and Telegram-based remote interaction.
 </p>
-<p><a href="irrigation.html">View Details →</a></p>
+
+<p style="margin-top:10px; color:#00bcd4; font-weight:600;">
+View Details →
+</p>
+
 </div>
 </div>
+</a>
 
 </div>
 </div>
 </section>
+
+<section id="contact">
+<div class="container contact">
+<h2>Contact</h2>
+<p>Email: setia.trianto@gmail.com</p>
+<p>GitHub: <a href="https://github.com/triant369" target="_blank">github.com/triant369</a></p>
+<p>YouTube: <a href="https://www.youtube.com/@STTechID" target="_blank">youtube.com/@STTechID</a></p>
+</div>
+</section>
+
+<footer>
+© 2026 Setia Trianto | Triant Applied Research & Engineering  
+</footer>
+
+<script>
+function setLang(lang) {
+    localStorage.setItem("siteLang", lang);
+    updateLang();
+}
+function updateLang() {
+    var lang = localStorage.getItem("siteLang") || "en";
+    document.querySelectorAll(".lang").forEach(el => el.style.display = "none");
+    document.querySelectorAll("." + lang).forEach(el => el.style.display = "block");
+}
+document.addEventListener("DOMContentLoaded", updateLang);
+</script>
 
 </body>
 </html>
