@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="MMOOxX8YyJGSGTpv-8_AuTxyPFo38nP9yVR3w92Q5dA" />
 
-<title>Setia Trianto | IoT Engineering & Smart Irrigation</title>
-
-<meta name="description" content="IoT engineering services, smart irrigation system, telemetry monitoring, and embedded system development.">
+<title>Setia Trianto | Embedded Systems & IoT Engineering Practice</title>
 
 <style>
 
@@ -36,11 +34,41 @@ nav a:hover { color:#00bcd4; }
 
 /* ===== SECTION ===== */
 section { padding:80px 0; }
-.center-text { text-align:center; max-width:800px; margin:auto; }
+section h2 { text-align:center; margin-bottom:30px; }
+.center-text { text-align:center; max-width:850px; margin:auto; line-height:1.7; }
 
-/* ===== PROJECT ===== */
-.project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; }
-.project-card { background:white; padding:20px; border-radius:10px; }
+/* ===== SERVICES ===== */
+.service-list { max-width:800px; margin:auto; line-height:1.8; }
+
+/* ===== PROJECT GRID ===== */
+.project-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+/* ===== PROJECT CARD ===== */
+.project-card {
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 22px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+.project-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== IMAGE FIX ===== */
+.project-card img {
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* ===== CONTENT ===== */
+.project-content { padding:20px; }
 
 /* ===== CONTACT ===== */
 .contact { text-align:center; }
@@ -53,6 +81,7 @@ footer { background:#111; color:#aaa; text-align:center; padding:30px; }
 
 <body>
 
+<!-- NAV -->
 <nav>
 <div class="container">
 <div><strong>Setia Trianto</strong></div>
@@ -94,14 +123,20 @@ footer { background:#111; color:#aaa; text-align:center; padding:30px; }
 <div class="lang en">
 <h2>About</h2>
 <p class="center-text">
-Independent IoT engineer focusing on embedded systems, telemetry, and smart irrigation.
+Independent embedded systems and IoT engineering practice focused on applied prototyping, 
+telemetry implementation, and experimental electronics development. 
+Completed national IoT technical training program (Kominfo, 2022).  
+Selected works are registered under Indonesian Intellectual Property (HKI).
 </p>
 </div>
 
 <div class="lang id" style="display:none;">
 <h2>Tentang</h2>
 <p class="center-text">
-Engineer IoT yang berfokus pada sistem embedded dan monitoring.
+Praktik rekayasa sistem tertanam dan IoT yang berfokus pada pengembangan prototipe terapan, 
+implementasi sistem telemetri, serta eksperimen perangkat elektronik. 
+Telah menyelesaikan pelatihan teknis IoT nasional (Kominfo, 2022).  
+Beberapa karya telah terdaftar dalam Hak Kekayaan Intelektual (HKI).
 </p>
 </div>
 
@@ -113,45 +148,24 @@ Engineer IoT yang berfokus pada sistem embedded dan monitoring.
 <div class="container">
 
 <div class="lang en">
-<h2>Services</h2>
-<ul class="center-text">
-<li>IoT System Development</li>
-<li>Smart Irrigation Automation</li>
-<li>Telemetry Monitoring</li>
+<h2>Engineering Services</h2>
+<ul class="service-list">
+<li>IoT System Implementation & Embedded Integration</li>
+<li>Custom Embedded Prototype Development (ATmega, Arduino, ESP32, ESP8266)</li>
+<li>Telemetry & Remote Monitoring Systems (WiFi / LoRa)</li>
+<li>Hardware Testing & System Evaluation</li>
+<li>Technical Workshops & Embedded Training</li>
 </ul>
 </div>
 
 <div class="lang id" style="display:none;">
-<h2>Layanan</h2>
-<ul class="center-text">
-<li>Pengembangan IoT</li>
-<li>Smart Irrigation</li>
-<li>Monitoring</li>
-</ul>
-</div>
-
-</div>
-</section>
-
-<!-- WHAT I BUILD -->
-<section>
-<div class="container">
-
-<div class="lang en">
-<h2>What I Build</h2>
-<ul class="center-text">
-<li>Smart Irrigation Systems</li>
-<li>IoT Monitoring (Telegram)</li>
-<li>Embedded Systems (ESP32)</li>
-</ul>
-</div>
-
-<div class="lang id" style="display:none;">
-<h2>Solusi</h2>
-<ul class="center-text">
-<li>Smart Irrigation</li>
-<li>Monitoring IoT</li>
-<li>Embedded System</li>
+<h2>Layanan Rekayasa</h2>
+<ul class="service-list">
+<li>Implementasi Sistem IoT & Integrasi Embedded</li>
+<li>Pengembangan Prototipe Sistem Tertanam (ATmega, Arduino, ESP32, ESP8266)</li>
+<li>Sistem Telemetri & Monitoring Jarak Jauh (WiFi / LoRa)</li>
+<li>Pengujian Perangkat Keras & Evaluasi Sistem</li>
+<li>Workshop Teknis & Pelatihan Embedded</li>
 </ul>
 </div>
 
@@ -166,23 +180,39 @@ Engineer IoT yang berfokus pada sistem embedded dan monitoring.
 <div class="project-grid">
 
 <div class="project-card">
-<h3>GPS System</h3>
+<img src="gps.jpg">
+<div class="project-content">
+<h3>Portable GPS System</h3>
+</div>
 </div>
 
 <div class="project-card">
-<h3>Wireless Control</h3>
+<img src="tractor.JPG">
+<div class="project-content">
+<h3>Wireless Control Prototype</h3>
+</div>
 </div>
 
 <div class="project-card">
-<h3>Smart Irrigation IoT</h3>
-<p><a href="irrigation.html">View Details →</a></p>
+<img src="assets/images/irrigation/irrigation-main.jpeg">
+<div class="project-content">
+<h3>Smart Irrigation IoT System</h3>
 
 <p>
-<a href="https://wa.me/6281906116149?text=Halo%20saya%20tertarik%20Smart%20Irrigation">
+Real-time soil monitoring with autonomous irrigation control.
+</p>
+
+<p>
+<a href="irrigation.html" style="color:#00bcd4;">View Details →</a>
+</p>
+
+<p>
+<a href="https://wa.me/6281906116149?text=Halo%20saya%20tertarik%20Smart%20Irrigation" style="color:#25D366;">
 Request This System →
 </a>
 </p>
 
+</div>
 </div>
 
 </div>
@@ -194,37 +224,18 @@ Request This System →
 <div class="container">
 
 <div class="lang en">
-<h2>Applied Work</h2>
+<h2>Applied & Experimental Work</h2>
 <p class="center-text">
-RF monitoring, IoT integration, and hardware experiments.
+Ongoing applied work includes custom DC power supply design, RF signal monitoring prototypes, 
+reverse engineering analysis, hardware teardown evaluation, and IoT integration using ESP32 / ESP8266.
 </p>
 </div>
 
 <div class="lang id" style="display:none;">
-<h2>Pekerjaan Terapan</h2>
+<h2>Pekerjaan Terapan & Eksperimental</h2>
 <p class="center-text">
-Eksperimen IoT dan sistem monitoring.
-</p>
-</div>
-
-</div>
-</section>
-
-<!-- TRUST -->
-<section>
-<div class="container">
-
-<div class="lang en">
-<h2>Engineering Background</h2>
-<p class="center-text">
-IoT training (Kominfo), HKI registered works, and 7+ years experience.
-</p>
-</div>
-
-<div class="lang id" style="display:none;">
-<h2>Latar Belakang</h2>
-<p class="center-text">
-Pelatihan IoT Kominfo dan karya HKI.
+Pekerjaan teknis meliputi perancangan power supply DC, monitoring RF, analisis reverse engineering, 
+evaluasi perangkat, serta eksperimen IoT berbasis ESP32 / ESP8266.
 </p>
 </div>
 
@@ -248,12 +259,8 @@ Pelatihan IoT Kominfo dan karya HKI.
 <p>Email: setia.trianto@gmail.com</p>
 
 <div style="margin-top:20px;">
-<a href="https://wa.me/6281906116149?text=Halo%20saya%20ingin%20membuat%20sistem%20IoT" style="
-padding:12px 20px;
-background:#25D366;
-color:white;
-border-radius:6px;
-text-decoration:none;">
+<a href="https://wa.me/6281906116149?text=Halo%20saya%20ingin%20membuat%20sistem%20IoT"
+style="padding:12px 20px; background:#25D366; color:white; border-radius:6px; text-decoration:none;">
 💬 Chat WhatsApp
 </a>
 </div>
