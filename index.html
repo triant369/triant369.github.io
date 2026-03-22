@@ -45,18 +45,6 @@ nav a:hover { color:#00bcd4; }
 .hero h1 { font-size:38px; margin-bottom:15px; }
 .hero p { font-size:18px; color:#ddd; }
 
-.highlight-box {
-    margin-top: 35px;
-    display: inline-block;
-    padding: 20px 28px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #e5e5e5;
-}
-
 .hero-cta { margin-top: 30px; }
 
 .hero-cta a {
@@ -74,11 +62,6 @@ nav a:hover { color:#00bcd4; }
 /* ===== SECTION ===== */
 section { padding:80px 0; }
 section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
-.center-text { text-align:center; max-width:850px; margin:auto; font-size:16px; line-height:1.7; }
-
-/* ===== LIST ===== */
-.service-list { max-width:800px; margin: 30px auto; line-height:1.8; }
-.service-list li { margin-bottom:12px; }
 
 /* ===== PROJECT GRID ===== */
 .project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:35px; }
@@ -96,13 +79,6 @@ section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
 .project-content { padding:25px; }
 .project-content h3 { margin-top:0; }
 
-/* ===== PROJECT TEXT ===== */
-.project-content p {
-    font-size:14px;
-    color:#555;
-    margin:6px 0;
-}
-
 /* ===== CONTACT ===== */
 .contact { text-align:center; }
 .contact a { color:#00bcd4; text-decoration:none; }
@@ -111,8 +87,30 @@ section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
 /* ===== FOOTER ===== */
 footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-size:13px; }
 
-@media (max-width:768px){
-.hero h1{font-size:28px;}
+/* ===== WHATSAPP ===== */
+.wa-button {
+    display:inline-block;
+    padding:12px 20px;
+    background:#25D366;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    margin-top:10px;
+}
+.wa-button:hover { background:#1ebe5d; }
+
+.wa-float {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:14px 16px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:20px;
+    box-shadow:0 6px 16px rgba(0,0,0,0.2);
 }
 
 </style>
@@ -125,10 +123,7 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 <div><strong>Setia Trianto</strong></div>
 <div>
 <a href="insights.html">Insights</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
 <a href="#projects">Projects</a>
-<a href="#experimental">Applied Work</a>
 <a href="#contact">Contact</a>
 <span class="lang-toggle">
 <button onclick="setLang('en')">EN</button>
@@ -139,6 +134,13 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 </nav>
 
 <div class="hero">
+
+<div style="margin-top:20px;">
+<a class="wa-button" href="https://wa.me/6281906116149" target="_blank">
+<span class="lang en">💬 Quick Consultation</span>
+<span class="lang id" style="display:none;">💬 Konsultasi Cepat</span>
+</a>
+</div>
 
 <div class="lang en">
 <h1>Triant Applied Research & Engineering</h1>
@@ -158,48 +160,26 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 
 <div class="project-grid">
 
-<!-- GPS -->
 <div class="project-card">
-<img src="gps.jpg" alt="Portable GPS">
+<img src="gps.jpg">
 <div class="project-content">
 <h3>Portable Emergency GPS & Telemetry System</h3>
-<p><strong>Status:</strong> Registered HKI</p>
-<p><strong>Scope:</strong> Embedded System • GPS Integration • Telemetry</p>
 </div>
 </div>
 
-<!-- TRACTOR -->
 <div class="project-card">
-<img src="tractor.JPG" alt="Wireless Control">
+<img src="tractor.JPG">
 <div class="project-content">
 <h3>Wireless Control Prototype</h3>
-<p><strong>Status:</strong> Registered HKI</p>
-<p><strong>Scope:</strong> Control System • Embedded Programming • RF Communication</p>
 </div>
 </div>
 
-<!-- IRRIGATION -->
 <a href="irrigation.html" style="text-decoration:none; color:inherit;">
 <div class="project-card">
-
-<img src="assets/images/irrigation/irrigation-main.jpeg" alt="Smart Irrigation IoT System">
-
+<img src="assets/images/irrigation/irrigation-main.jpeg">
 <div class="project-content">
-
 <h3>Smart Irrigation IoT System</h3>
-
-<p><strong>Status:</strong> Functional Prototype</p>
-<p><strong>Scope:</strong> IoT • Embedded System • Automation</p>
-
-<p>
-Real-time soil monitoring with autonomous irrigation control 
-and Telegram-based remote interaction.
-</p>
-
-<p style="margin-top:10px; color:#00bcd4; font-weight:600;">
-View Details →
-</p>
-
+<p>Real-time soil monitoring with automatic control</p>
 </div>
 </div>
 </a>
@@ -211,14 +191,20 @@ View Details →
 <section id="contact">
 <div class="container contact">
 <h2>Contact</h2>
+
 <p>Email: setia.trianto@gmail.com</p>
 <p>GitHub: <a href="https://github.com/triant369" target="_blank">github.com/triant369</a></p>
-<p>YouTube: <a href="https://www.youtube.com/@STTechID" target="_blank">youtube.com/@STTechID</a></p>
+
+<a class="wa-button" href="https://wa.me/6281906116149?text=Halo%20Pak%20Setia,%20saya%20tertarik%20dengan%20project%20IoT%20Anda" target="_blank">
+<span class="lang en">💬 Consultation via WhatsApp</span>
+<span class="lang id" style="display:none;">💬 Konsultasi via WhatsApp</span>
+</a>
+
 </div>
 </section>
 
 <footer>
-© 2026 Setia Trianto | Triant Applied Research & Engineering  
+© 2026 Setia Trianto
 </footer>
 
 <script>
@@ -233,6 +219,10 @@ function updateLang() {
 }
 document.addEventListener("DOMContentLoaded", updateLang);
 </script>
+
+<a href="https://wa.me/6281906116149" class="wa-float" target="_blank">
+💬
+</a>
 
 </body>
 </html>
