@@ -45,32 +45,6 @@ nav a:hover { color:#00bcd4; }
 .hero h1 { font-size:38px; margin-bottom:15px; }
 .hero p { font-size:18px; color:#ddd; }
 
-.highlight-box {
-    margin-top: 35px;
-    display: inline-block;
-    padding: 20px 28px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #e5e5e5;
-}
-
-.hero-cta { margin-top: 30px; }
-
-.hero-cta a {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #00bcd4;
-    color: #111;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-.hero-cta a:hover { background: #00a3b8; }
-
 /* ===== SECTION ===== */
 section { padding:80px 0; }
 section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
@@ -96,7 +70,6 @@ section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
 .project-content { padding:25px; }
 .project-content h3 { margin-top:0; }
 
-/* ===== PROJECT TEXT ===== */
 .project-content p {
     font-size:14px;
     color:#555;
@@ -110,10 +83,6 @@ section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
 
 /* ===== FOOTER ===== */
 footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-size:13px; }
-
-@media (max-width:768px){
-.hero h1{font-size:28px;}
-}
 
 </style>
 </head>
@@ -152,6 +121,30 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 
 </div>
 
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2>About</h2>
+<p class="center-text">
+Independent engineering practice focused on embedded systems, IoT, and applied prototyping.
+</p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<h2>Services</h2>
+<ul class="service-list">
+<li>IoT System Implementation</li>
+<li>Embedded System Development</li>
+<li>Telemetry & Monitoring</li>
+<li>Hardware Testing</li>
+</ul>
+</div>
+</section>
+
+<!-- PROJECT -->
 <section id="projects">
 <div class="container">
 <h2>Selected Prototypes</h2>
@@ -159,37 +152,28 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-si
 <div class="project-grid">
 
 <div class="project-card">
-<img src="gps.jpg" alt="Portable GPS">
+<img src="gps.jpg">
 <div class="project-content">
-<h3>Portable Emergency GPS & Telemetry System</h3>
-<p><strong>Status:</strong> Registered HKI</p>
-<p><strong>Scope:</strong> Embedded System • GPS Integration • Telemetry</p>
+<h3>Portable Emergency GPS</h3>
+<p>Embedded telemetry system</p>
 </div>
 </div>
 
 <div class="project-card">
-<img src="tractor.JPG" alt="Wireless Control">
+<img src="tractor.JPG">
 <div class="project-content">
-<h3>Wireless Control Prototype</h3>
-<p><strong>Status:</strong> Registered HKI</p>
-<p><strong>Scope:</strong> Control System • Embedded Programming • RF Communication</p>
+<h3>Wireless Tractor Control</h3>
+<p>Remote control system</p>
 </div>
 </div>
 
 <a href="irrigation.html" style="text-decoration:none; color:inherit;">
 <div class="project-card">
-<img src="assets/images/irrigation/irrigation-main.jpeg" alt="Smart Irrigation IoT System">
+<img src="assets/images/irrigation/irrigation-main.jpeg">
 <div class="project-content">
 <h3>Smart Irrigation IoT System</h3>
-<p><strong>Status:</strong> Functional Prototype</p>
-<p><strong>Scope:</strong> IoT • Embedded System • Automation</p>
-<p>
-Real-time soil monitoring with autonomous irrigation control 
-and Telegram-based remote interaction.
-</p>
-<p style="margin-top:10px; color:#00bcd4; font-weight:600;">
-View Details →
-</p>
+<p>Autonomous irrigation control</p>
+<p style="color:#00bcd4;">View Details →</p>
 </div>
 </div>
 </a>
@@ -198,6 +182,17 @@ View Details →
 </div>
 </section>
 
+<!-- APPLIED WORK -->
+<section id="experimental">
+<div class="container">
+<h2>Applied Work</h2>
+<p class="center-text">
+Experimental research in RF systems, reverse engineering, and IoT integration.
+</p>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <div class="container contact">
 <h2>Contact</h2>
@@ -216,7 +211,7 @@ youtube.com/@STTechID
 </a>
 </p>
 
-<!-- WHATSAPP (DITAMBAHKAN) -->
+<!-- WHATSAPP -->
 <div style="margin-top:20px;">
 <a href="https://wa.me/6281906116149" target="_blank" style="
 display:inline-block;
@@ -227,7 +222,6 @@ text-decoration:none;
 border-radius:6px;
 font-weight:600;
 font-size:14px;
-transition:0.3s;
 ">
 💬 Chat WhatsApp
 </a>
