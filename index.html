@@ -10,6 +10,12 @@
 
 <meta name="description" content="Setia Trianto – Independent embedded systems and IoT engineering practice focused on applied prototyping, telemetry systems, hardware testing, and experimental electronics development.">
 <meta name="author" content="Setia Trianto">
+<link rel="canonical" href="https://triant369.github.io/">
+
+<meta property="og:title" content="Setia Trianto | Embedded Systems & IoT Engineering Practice">
+<meta property="og:description" content="Applied embedded systems, IoT architecture, telemetry systems, hardware testing, and experimental electronics development.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://triant369.github.io">
 
 <style>
 
@@ -23,13 +29,56 @@ nav .container { display:flex; justify-content:space-between; align-items:center
 nav a { color:white; text-decoration:none; margin-left:25px; font-size:14px; }
 nav a:hover { color:#00bcd4; }
 
+.lang-toggle button {
+    background:#333;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    margin-left:10px;
+    cursor:pointer;
+    font-size:12px;
+}
+.lang-toggle button:hover { background:#00bcd4; }
+
 /* ===== HERO ===== */
 .hero { background:linear-gradient(135deg,#111,#1f2937); color:white; padding:120px 20px; text-align:center; }
-.hero h1 { font-size:38px; }
+.hero h1 { font-size:38px; margin-bottom:15px; }
+.hero p { font-size:18px; color:#ddd; }
+
+.highlight-box {
+    margin-top: 35px;
+    display: inline-block;
+    padding: 20px 28px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e5e5e5;
+}
+
+.hero-cta { margin-top: 30px; }
+
+.hero-cta a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #00bcd4;
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.hero-cta a:hover { background: #00a3b8; }
 
 /* ===== SECTION ===== */
 section { padding:80px 0; }
-section h2 { text-align:center; }
+section h2 { text-align:center; margin-bottom:40px; font-size:26px; }
+.center-text { text-align:center; max-width:850px; margin:auto; font-size:16px; line-height:1.7; }
+
+/* ===== LIST ===== */
+.service-list { max-width:800px; margin: 30px auto; line-height:1.8; }
+.service-list li { margin-bottom:12px; }
 
 /* ===== PROJECT GRID ===== */
 .project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:35px; }
@@ -40,19 +89,31 @@ section h2 { text-align:center; }
     box-shadow:0 8px 22px rgba(0,0,0,0.06);
     overflow:hidden;
     transition:0.3s;
-    cursor:pointer;
 }
 .project-card:hover { transform:translateY(-6px); box-shadow:0 12px 28px rgba(0,0,0,0.1); }
 
 .project-card img { width:100%; height:auto; display:block; }
 .project-content { padding:25px; }
+.project-content h3 { margin-top:0; }
+
+/* ===== PROJECT TEXT ===== */
+.project-content p {
+    font-size:14px;
+    color:#555;
+    margin:6px 0;
+}
 
 /* ===== CONTACT ===== */
 .contact { text-align:center; }
 .contact a { color:#00bcd4; text-decoration:none; }
+.contact a:hover { text-decoration:underline; }
 
 /* ===== FOOTER ===== */
-footer { background:#111; color:#aaa; text-align:center; padding:35px 0; }
+footer { background:#111; color:#aaa; text-align:center; padding:35px 0; font-size:13px; }
+
+@media (max-width:768px){
+.hero h1{font-size:28px;}
+}
 
 </style>
 </head>
@@ -63,62 +124,72 @@ footer { background:#111; color:#aaa; text-align:center; padding:35px 0; }
 <div class="container">
 <div><strong>Setia Trianto</strong></div>
 <div>
+<a href="insights.html">Insights</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
 <a href="#projects">Projects</a>
+<a href="#experimental">Applied Work</a>
 <a href="#contact">Contact</a>
+<span class="lang-toggle">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('id')">ID</button>
+</span>
 </div>
 </div>
 </nav>
 
 <div class="hero">
+
+<div class="lang en">
 <h1>Triant Applied Research & Engineering</h1>
 <p>Embedded Systems • IoT Implementation • Telemetry Development</p>
 </div>
 
-<!-- ===== PROJECTS ===== -->
+<div class="lang id" style="display:none;">
+<h1>Triant Applied Research & Engineering</h1>
+<p>Sistem Tertanam • Implementasi IoT • Pengembangan Telemetri</p>
+</div>
+
+</div>
+
 <section id="projects">
 <div class="container">
 <h2>Selected Prototypes</h2>
 
 <div class="project-grid">
 
-<!-- GPS -->
 <div class="project-card">
-<img src="gps.jpg">
+<img src="gps.jpg" alt="Portable GPS">
 <div class="project-content">
-<h3>Portable GPS System</h3>
+<h3>Portable Emergency GPS & Telemetry System</h3>
+<p><strong>Status:</strong> Registered HKI</p>
+<p><strong>Scope:</strong> Embedded System • GPS Integration • Telemetry</p>
 </div>
 </div>
 
-<!-- TRACTOR -->
 <div class="project-card">
-<img src="tractor.JPG">
+<img src="tractor.JPG" alt="Wireless Control">
 <div class="project-content">
-<h3>Wireless Control Tractor</h3>
+<h3>Wireless Control Prototype</h3>
+<p><strong>Status:</strong> Registered HKI</p>
+<p><strong>Scope:</strong> Control System • Embedded Programming • RF Communication</p>
 </div>
 </div>
 
-<!-- IRRIGATION -->
 <a href="irrigation.html" style="text-decoration:none; color:inherit;">
 <div class="project-card">
-
 <img src="assets/images/irrigation/irrigation-main.jpeg" alt="Smart Irrigation IoT System">
-
 <div class="project-content">
-
 <h3>Smart Irrigation IoT System</h3>
-
 <p><strong>Status:</strong> Functional Prototype</p>
 <p><strong>Scope:</strong> IoT • Embedded System • Automation</p>
-
 <p>
 Real-time soil monitoring with autonomous irrigation control 
 and Telegram-based remote interaction.
 </p>
-
 <p style="margin-top:10px; color:#00bcd4; font-weight:600;">
 View Details →
 </p>
-
 </div>
 </div>
 </a>
@@ -127,10 +198,8 @@ View Details →
 </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
 <section id="contact">
 <div class="container contact">
-
 <h2>Contact</h2>
 
 <p>Email: setia.trianto@gmail.com</p>
@@ -147,33 +216,42 @@ youtube.com/@STTechID
 </a>
 </p>
 
-<!-- WHATSAPP BUTTON -->
-<div style="margin-top:25px;">
+<!-- WHATSAPP (DITAMBAHKAN) -->
+<div style="margin-top:20px;">
 <a href="https://wa.me/6281906116149" target="_blank" style="
 display:inline-block;
-padding:12px 26px;
+padding:12px 24px;
 background:#25D366;
-color:#ffffff;
-border-radius:8px;
+color:#fff;
 text-decoration:none;
+border-radius:6px;
 font-weight:600;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
+font-size:14px;
 transition:0.3s;
 ">
 💬 Chat WhatsApp
 </a>
 </div>
 
-<p style="margin-top:25px; font-size:14px; color:#666;">
-Open for embedded system and IoT prototype collaboration.
-</p>
-
 </div>
 </section>
 
 <footer>
-© 2026 Setia Trianto | Triant Applied Research & Engineering
+© 2026 Setia Trianto | Triant Applied Research & Engineering  
 </footer>
+
+<script>
+function setLang(lang) {
+    localStorage.setItem("siteLang", lang);
+    updateLang();
+}
+function updateLang() {
+    var lang = localStorage.getItem("siteLang") || "en";
+    document.querySelectorAll(".lang").forEach(el => el.style.display = "none");
+    document.querySelectorAll("." + lang).forEach(el => el.style.display = "block");
+}
+document.addEventListener("DOMContentLoaded", updateLang);
+</script>
 
 </body>
 </html>
