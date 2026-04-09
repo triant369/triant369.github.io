@@ -53,16 +53,14 @@ h2 {
 /* ===== GALLERY ===== */
 .gallery {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:20px;
 }
 
 .gallery img {
     width:100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
+    height:auto;
     border-radius:10px;
-    transition:0.3s;
 }
 
 .gallery img:hover {
