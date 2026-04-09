@@ -53,21 +53,20 @@ h2 {
 /* ===== GALLERY ===== */
 .gallery {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:20px;
-    margin-top:30px;
 }
 
 .gallery img {
     width:100%;
-    height:200px;
-    object-fit:cover;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius:10px;
+    transition:0.3s;
 }
 
 .gallery img:hover {
     transform:scale(1.05);
-    transition:0.3s;
 }
 
 /* ===== BUTTON ===== */
