@@ -41,11 +41,28 @@ h2 {
     margin-bottom:20px;
 }
 
-/* ===== IMAGE ===== */
-img {
+/* ===== MAIN IMAGE ===== */
+.main-img {
     width:100%;
+    max-width:800px;
+    display:block;
+    margin:30px auto;
     border-radius:10px;
-    margin-top:20px;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.gallery img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
 }
 
 /* ===== BUTTON ===== */
@@ -121,7 +138,7 @@ Perangkat bekerja secara mandiri menggunakan edge computing tanpa ketergantungan
 </p>
 </div>
 
-<img src="assets/images/irrigation/irrigation-main.jpeg">
+<img src="assets/images/irrigation/irrigation-main.jpeg" class="main-img">
 
 </div>
 </section>
@@ -169,10 +186,12 @@ Perangkat bekerja secara mandiri menggunakan edge computing tanpa ketergantungan
 <h2>Komponen Sistem</h2>
 </div>
 
-<img src="assets/images/irrigation/system.jpeg">
-<img src="assets/images/irrigation/system2.jpeg">
-<img src="assets/images/irrigation/sensor.jpeg">
-<img src="assets/images/irrigation/Telegram.jpeg">
+<div class="gallery">
+    <img src="assets/images/irrigation/system.jpeg">
+    <img src="assets/images/irrigation/system2.jpeg">
+    <img src="assets/images/irrigation/sensor.jpeg">
+    <img src="assets/images/irrigation/Telegram.jpeg">
+</div>
 
 </div>
 </section>
